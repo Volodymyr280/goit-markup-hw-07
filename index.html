@@ -25,12 +25,21 @@
   </head>
   <body>
     <!-- Хедер -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <nav class="nav">
           <a class="nav-logo link" href="./index.html"
             >Web<span class="logo">Studio</span></a
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="32" height="22">
+              <use href="./images/icons.svg#burger-icon"></use>
+            </svg>
+          </button>
           <ul class="nav-list list">
             <li class="nav-item">
               <a class="nav-link link active" href="./index.html">Studio</a>
@@ -58,11 +67,11 @@
           </ul>
         </address>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Герой -->
-      <!-- <section class="hero section">
-        <div class="container">
+      <section class="hero section">
+        <div class="container hero-container">
           <h1 class="hero-title">
             Effective Solutions <br />
             for Your Business
@@ -71,10 +80,10 @@
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- Перелік -->
-      <!-- <section class="advantages section">
+      <section class="advantages section">
         <div class="container">
           <h2 hidden class="visually-hidden">Advantages</h2>
           <ul class="advantages-list list">
@@ -128,9 +137,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Що ми робимо -->
-      <!-- <section class="examples section">
+      <section class="examples section">
         <div class="container">
           <h2 class="section-title examples-title">What are we doing</h2>
           <ul class="examples-list list">
@@ -160,9 +169,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Наша команда -->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container">
           <h2 class="section-title team-title">Our Team</h2>
           <ul class="team-list list">
@@ -336,9 +345,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Customers -->
-      <!-- <section class="customers section">
+      <section class="customers section">
         <div class="container">
           <h2 class="section-title custom-title">Customers</h2>
           <ul class="list-none customers-list">
@@ -386,11 +395,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- Футер -->
-    <footer class="footer section">
-      <div class="container footer-container">
+    <footer class="footer section footer-section">
+      <div class="container foot-cont">
         <div class="footer-info">
           <a class="nav-logo link footer-logo" href="./index.html"
             >Web<span class="studio">Studio</span></a
@@ -434,24 +443,22 @@
           </ul>
         </div>
         <div class="footer-box">
+          <p class="footer-form-title">Subscribe</p>
           <form class="footer-form" name="footer-form">
-            <p class="footer-form-title">Subscribe</p>
-            <div class="footer-form-area">
-              <label class="footer-label">
-                <input
-                  class="footer-field"
-                  type="text"
-                  name="footer-email"
-                  placeholder="E-mail"
-                />
-              </label>
-              <button class="footer-btn" type="submit">
-                Subscribe
-                <svg class="footer-form-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-footer-btn"></use>
-                </svg>
-              </button>
-            </div>
+            <label class="footer-label">
+              <input
+                class="footer-field"
+                type="text"
+                name="footer-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-btn" type="submit">
+              Subscribe
+              <svg class="footer-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-footer-btn"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -540,6 +547,81 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <div class="list-menu">
+        <ul class="mobile-menu list">
+          <li><a href="" class="mobile-menu-item">Studio</a></li>
+          <li><a href="" class="mobile-menu-item">Portfolio</a></li>
+          <li><a href="" class="mobile-menu-item">Contacts</a></li>
+        </ul>
+
+        <ul class="mobile-contacts list">
+          <li>
+            <a href="tel:110001111111" class="link">+11 (000) 111-11-11</a>
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" class="link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-socials list">
+          <li class="social-items">
+            <a class="footer-link" href="" aria-label="instagram">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-items">
+            <a class="footer-link" href="" aria-label="twitter">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-items">
+            <a class="footer-link" href="" aria-label="facebook">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-items">
+            <a class="footer-link" href="" aria-label="linkedin">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <!-- mobile menu scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
