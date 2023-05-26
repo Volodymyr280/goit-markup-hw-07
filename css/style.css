@@ -316,8 +316,7 @@ color:var(--color-navy-blue);
 }
 .address-link {
 color: var(--color-slate);
-font-family: 'Roboto';
-font-style: normal;
+font-family: var(--primary-font);
 font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
@@ -326,7 +325,16 @@ transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media only screen and (min-width: 768px) {
+   .address-link{
+	font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+   .address-link{
+	font-size: 16px;
+  }
+}
 
 .address-link:hover,
 .address-link:focus {
@@ -348,7 +356,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 188px 0;
+	padding: 112px 0;
 	margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -375,6 +383,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1desc_@2x.png);
   }
 }
+}
+@media only screen and (min-width: 1158px) {
+   .hero{
+	padding: 188px 0;
+  }
 }
 
 .hero-title {
@@ -624,7 +637,11 @@ padding: 32px 0;
 .customers{
 	background-color: var(--color-white);
 }
-
+@media only screen and (min-width: 758px) {
+  .custom-container{
+	width: 552px;
+}
+}
 .customers-list{
 	display: flex;
 	flex-wrap: wrap;
@@ -753,6 +770,11 @@ background-color: var(--color-navy-blue);
 	text-align: left;
   }
 }
+@media only screen and (min-width: 768px) {
+   .footer-logo{
+	padding: 0;
+  }
+}
 .footer-text {
 	
 	color: #f4f4fd;
@@ -765,6 +787,7 @@ background-color: var(--color-navy-blue);
 	@media only screen and (min-width: 1158px) {
 	   .footer-text{
 		width: 264px;
+		margin-bottom: 0;
 	  }
 	}
 .footer-link{
@@ -1280,6 +1303,11 @@ width: 100%;
   }
 }
 
+@media (max-width: 427px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
@@ -1314,7 +1342,11 @@ width: 100%;
   right: 16px;
   
 }
-
+.list-menu{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
 
 
 
@@ -1354,7 +1386,7 @@ width: 100%;
 	color: var(--color-ocean);
 }
 .mobile-menu{
-	margin-bottom: 284px;
+	margin-bottom: auto;
 }
 .mobile-contacts{
 	margin-bottom: 48px;
